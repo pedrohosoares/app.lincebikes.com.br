@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class LogController extends Controller
 {
-    public function get()
+    public function get(Job $job)
     {
-
+        return response($job->get(),200);
     }
 
     public function insert(Request $request){

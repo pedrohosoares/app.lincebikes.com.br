@@ -13,4 +13,8 @@ class Job extends Model
         'data',
         'name'
     ];
+
+    protected $casts = [
+        'data' => 'array'
+    ];
 }

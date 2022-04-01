@@ -15,7 +15,11 @@ class LogController extends Controller
 
     public function insert(Request $request){
         $data = $request->all();
-        Job::create(['data'=>$data,'name'=>'logs']);
+        $save = Job::create(['data'=>$data,'name'=>'logs']);
+        if($save)
+        {
+            return response(['data'=>['status'=>'success']],200);
+        }
     }
 
     public function update(Request $request){

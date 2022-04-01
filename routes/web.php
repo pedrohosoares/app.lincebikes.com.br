@@ -7,7 +7,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
+Route::get('ola',function(){
+    return 'ola';
+});
 Route::post('/api/logs',[LogController::class,'insert'])->name('api.logs');
 Route::put('/api/logs',[LogController::class,'update'])->name('api.logs');
 Route::get('/api/logs',[LogController::class,'get'])->name('api.logs');

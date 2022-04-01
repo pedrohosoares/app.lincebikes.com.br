@@ -18,7 +18,7 @@ class LogController extends Controller
         $save = Job::create(['data'=>$data,'name'=>'logs']);
         if($save)
         {
-            return response(['data'=>['status'=>'success']],200);
+            return response(['data'=>['status'=>'success']],201);
         }
     }
 
